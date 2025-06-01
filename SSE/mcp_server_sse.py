@@ -59,6 +59,7 @@ async def messages(request: Request):
             logging.info(f"Nuclei output: {output[:500]}")
             if error:
                 logging.error(f"Nuclei stderr: {error}")
+                return {"status": "error", "message": f"Nuclei error: {error}"}
         except subprocess.TimeoutExpired:
             process.kill()
             error_msg = "Nuclei scan timed out after 150 seconds"
@@ -79,21 +80,28 @@ async def messages(request: Request):
             logging.error(error_msg)
             return {"status": "error", "message": error_msg}
 
-        # Kiểm tra định dạng đầu ra của Nuclei
-        try:
-            for line in output.splitlines():
-                if line.strip():  # Bỏ qua các dòng trống
+        # Lọc và ghi chỉ các dòng JSONL hợp lệ
+        valid_lines = []
+        for line in output.splitlines():
+            if line.strip():
+                try:
                     json.loads(line)
-        except json.JSONDecodeError as e:
-            error_msg = f"Invalid JSONL output from Nuclei: {str(e)}"
+                    valid_lines.append(line)
+                except json.JSONDecodeError:
+                    logging.warning(f"Skipping invalid JSONL line from Nuclei output: {line[:100]}")
+                    continue
+
+        if not valid_lines:
+            error_msg = "No valid JSONL output from Nuclei"
             logging.error(error_msg)
             return {"status": "error", "message": error_msg}
 
+        # Ghi kết quả vào file
         if not os.path.exists("logs"):
             os.makedirs("logs")
             logging.info("Created logs directory")
-        with open("logs/scan_results.json", "w") as f:
-            f.write(output)
+        with open("logs/scan_results.json", "w", encoding="utf-8") as f:
+            f.write("\n".join(valid_lines))
         logging.info(f"Scan completed for {url} at {datetime.now()}")
         return {"status": "success"}
     except FileNotFoundError as e:

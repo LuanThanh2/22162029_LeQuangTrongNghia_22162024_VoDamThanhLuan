@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuclei MCP Scanner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #ddd;
+      margin: 0 5px;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab.active {
+      background-color: #007bff;
+      color: white;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background-color: white;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input,
+    select,
+    button {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .loading {
+      color: #007bff;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nuclei MCP Scanner</h1>
+
+  <div class="tabs">
+    <div class="tab active" onclick="openTab('manual')">Manual Scan</div>
+    <div class="tab" onclick="openTab('deepseek')">DeepSeek-Assisted Scan</div>
+  </div>
+
+  <div id="manual" class="tab-content active">
+    <form id="manual-scan-form" method="post" action="/scan">
+      <input type="hidden" name="scan_type" value="manual" /> <!-- Thêm trường scan_type -->
+      <label for="url">Target URL (e.g., http://testphp.vulnweb.com/):</label>
+      <input type="text" id="url" name="url" placeholder="Enter target URL" required />
+      <label for="template">Choose Template:</label>
+      <select id="template" name="template" required>
+        <option value="" disabled selected>Select a template</option>
+        {% for template in templates %}
+        <option value="{{ template }}">{{ template }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" onclick="showLoading('manual')">Scan</button>
+      <a href="/history">View Scan History</a>
+      <p id="manual-loading" class="loading" style="display: none;">Scanning... Please wait.</p>
+    </form>
+  </div>
+
+  <div id="deepseek" class="tab-content">
+    <form id="deepseek-scan-form" method="post" action="/scan">
+      <input type="hidden" name="scan_type" value="deepseek" /> <!-- Thêm trường scan_type -->
+      <label for="deepseek-input">Enter Command (e.g., Scan http://demo.testfire.net for XSS):</label>
+      <input type="text" id="deepseek-input" name="deepseek_input" placeholder="Enter command" required />
+      <button type="submit" onclick="showLoading('deepseek')">Scan with DeepSeek</button>
+      <a href="/history">View Scan History</a>
+      <p id="deepseek-loading" class="loading" style="display: none;">Processing with DeepSeek... Please wait.</p>
+    </form>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      document.querySelectorAll(".tab").forEach((tab) => {
+        tab.classList.remove("active");
+      });
+      document.querySelectorAll(".tab-content").forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      document.querySelector(`.tab[onclick="openTab('${tabName}')"]`).classList.add("active");
+      document.getElementById(tabName).classList.add("active");
+    }
+
+    function showLoading(type) {
+      if (type === "manual") {
+        document.getElementById("manual-loading").style.display = "block";
+      } else if (type === "deepseek") {
+        document.getElementById("deepseek-loading").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

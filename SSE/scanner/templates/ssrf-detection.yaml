@@ -1,7 +1,7 @@
 id: ssrf-detection
 info:
   name: Server-Side Request Forgery Detection
-  author: nghia
+  author: luan
   severity: critical
   description: Detects Server-Side Request Forgery (SSRF) vulnerabilities by attempting to access internal or external resources.
   reference:

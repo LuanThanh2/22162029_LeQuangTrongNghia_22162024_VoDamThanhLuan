@@ -396,3 +396,284 @@
 2025-05-17 19:42:19,936 - INFO:werkzeug:127.0.0.1 - - [17/May/2025 19:42:19] "GET /results HTTP/1.1" 200 -
 2025-05-17 19:42:59,044 - INFO:werkzeug:127.0.0.1 - - [17/May/2025 19:42:59] "GET /history HTTP/1.1" 200 -
 2025-05-17 19:43:43,302 - INFO:werkzeug:127.0.0.1 - - [17/May/2025 19:43:43] "GET / HTTP/1.1" 200 -
+2025-05-24 13:09:00,852 - INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.232.82:5000
+2025-05-24 13:09:00,853 - INFO:werkzeug:[33mPress CTRL+C to quit[0m
+2025-05-24 13:09:00,853 - INFO:werkzeug: * Restarting with stat
+2025-05-24 13:09:01,429 - WARNING:werkzeug: * Debugger is active!
+2025-05-24 13:09:01,429 - INFO:werkzeug: * Debugger PIN: 111-713-453
+2025-05-24 13:09:51,119 - INFO:werkzeug:127.0.0.1 - - [24/May/2025 13:09:51] "GET / HTTP/1.1" 200 -
+2025-05-24 13:09:52,262 - INFO:werkzeug:127.0.0.1 - - [24/May/2025 13:09:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-24 13:15:20,949 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-24 13:15:20,949 - INFO:__main__:Starting nuclei_scan with URLs: ['http://demo.testfire.net'], Templates: ['scanner\\templates\\lfi-rce-detection.yaml']
+2025-05-24 13:15:20,949 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-24 13:15:20,949 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-24 13:15:20,950 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-24 13:15:20,949 - INFO:__main__:Running Nuclei command: nuclei -u http://demo.testfire.net -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml -jsonl -silent -rate-limit 10
+2025-05-24 13:19:20,043 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-24 13:19:20,043 - INFO:__main__:Nuclei scan completed for http://demo.testfire.net
+2025-05-24 13:19:20,044 - WARNING:__main__:No vulnerabilities found for http://demo.testfire.net with template lfi-rce-detection.yaml
+2025-05-24 13:19:20,046 - INFO:werkzeug:127.0.0.1 - - [24/May/2025 13:19:20] "POST /scan HTTP/1.1" 200 -
+2025-05-24 13:23:47,525 - INFO:werkzeug:127.0.0.1 - - [24/May/2025 13:23:47] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:03:34,825 - INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.237.214:5000
+2025-05-28 14:03:34,841 - INFO:werkzeug:[33mPress CTRL+C to quit[0m
+2025-05-28 14:03:34,842 - INFO:werkzeug: * Restarting with stat
+2025-05-28 14:03:35,368 - WARNING:werkzeug: * Debugger is active!
+2025-05-28 14:03:35,377 - INFO:werkzeug: * Debugger PIN: 101-376-624
+2025-05-28 14:03:57,637 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:03:57] "GET / HTTP/1.1" 200 -
+2025-05-28 14:03:58,600 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:03:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-28 14:06:03,584 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:06:03,584 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com/'], Templates: ['scanner\\templates\\lfi-rce-detection.yaml']
+2025-05-28 14:06:03,584 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:06:03,584 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:06:03,584 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:06:03,584 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:06:29,235 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:06:29] "GET / HTTP/1.1" 200 -
+2025-05-28 14:07:02,095 - INFO:__main__:Request from DeepSeek: {
+  "jsonrpc": "2.0",
+  "method": "call_tool",
+  "params": {
+    "tool_name": "nuclei_scan",
+    "args": {
+      "urls": [
+        "http://demo.testfire.net"
+      ],
+      "template_paths": [
+        "scanner/templates/xss-detection.yaml",
+        "scanner/templates/sql_injection_advanced.yaml",
+        "scanner/templates/lfi-rce-detection.yaml",
+        "scanner/templates/csrf-detection.yaml",
+        "scanner/templates/idor-detection.yaml",
+        "scanner/templates/ssrf-detection.yaml",
+        "scanner/templates/bac-detection.yaml",
+        "scanner/templates/sensitive-data-exposure.yaml"
+      ]
+    }
+  },
+  "id": 1
+}
+2025-05-28 14:07:02,628 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:07:02,628 - INFO:__main__:Starting nuclei_scan with URLs: ['http://demo.testfire.net'], Templates: ['scanner/templates/xss-detection.yaml', 'scanner/templates/sql_injection_advanced.yaml', 'scanner/templates/lfi-rce-detection.yaml', 'scanner/templates/csrf-detection.yaml', 'scanner/templates/idor-detection.yaml', 'scanner/templates/ssrf-detection.yaml', 'scanner/templates/bac-detection.yaml', 'scanner/templates/sensitive-data-exposure.yaml']
+2025-05-28 14:07:02,629 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:07:02,628 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:07:02,629 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:07:02,628 - INFO:__main__:Running Nuclei command: nuclei -u http://demo.testfire.net -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\xss-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sql_injection_advanced.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\csrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\idor-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\ssrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\bac-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sensitive-data-exposure.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:11:11,501 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:11:11,501 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com/
+2025-05-28 14:11:13,472 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:11:13] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:11:15,240 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:11:15,240 - INFO:__main__:Nuclei scan completed for http://demo.testfire.net
+2025-05-28 14:11:20,677 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:11:20] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:11:29,929 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:11:29] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:11:29,963 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:11:29] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:17:25,912 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:17:25,912 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com/'], Templates: ['scanner\\templates\\lfi-rce-detection.yaml']
+2025-05-28 14:17:25,913 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:17:25,912 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:17:25,913 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:17:25,913 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:20:16,961 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:20:16] "GET /history HTTP/1.1" 200 -
+2025-05-28 14:21:11,879 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:21:11,879 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com/
+2025-05-28 14:21:13,831 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:21:13] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:22:34,301 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:22:34] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:24:43,193 - INFO:__main__:Request from DeepSeek: {
+  "jsonrpc": "2.0",
+  "method": "call_tool",
+  "params": {
+    "tool_name": "nuclei_scan",
+    "args": {
+      "urls": [
+        "http://testphp.vulnweb.com"
+      ],
+      "template_paths": [
+        "scanner/templates/xss-detection.yaml",
+        "scanner/templates/sql_injection_advanced.yaml",
+        "scanner/templates/lfi-rce-detection.yaml",
+        "scanner/templates/csrf-detection.yaml",
+        "scanner/templates/idor-detection.yaml",
+        "scanner/templates/ssrf-detection.yaml",
+        "scanner/templates/bac-detection.yaml",
+        "scanner/templates/sensitive-data-exposure.yaml"
+      ]
+    }
+  },
+  "id": 1
+}
+2025-05-28 14:24:43,692 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:24:43,692 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com'], Templates: ['scanner/templates/xss-detection.yaml', 'scanner/templates/sql_injection_advanced.yaml', 'scanner/templates/lfi-rce-detection.yaml', 'scanner/templates/csrf-detection.yaml', 'scanner/templates/idor-detection.yaml', 'scanner/templates/ssrf-detection.yaml', 'scanner/templates/bac-detection.yaml', 'scanner/templates/sensitive-data-exposure.yaml']
+2025-05-28 14:24:43,692 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:24:43,692 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:24:43,692 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:24:43,692 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\xss-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sql_injection_advanced.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\csrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\idor-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\ssrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\bac-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sensitive-data-exposure.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:27:48,180 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:48,180 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com
+2025-05-28 14:27:49,157 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:49,157 - INFO:__main__:Base request to http://testphp.vulnweb.com/listproducts.php?cat=1 took 0.49s
+2025-05-28 14:27:49,394 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:49,394 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BSLEEP%2810%29-- took 0.23s
+2025-05-28 14:27:49,640 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:49,640 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:27:50,629 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:50,628 - INFO:__main__:Base request to http://testphp.vulnweb.com/search.php?test=1 took 0.49s
+2025-05-28 14:27:50,871 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:50,870 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:27:51,118 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:51,116 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:27:51,614 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:51,613 - INFO:__main__:Base request to http://testphp.vulnweb.com/artists.php?artist=1 took 0.49s
+2025-05-28 14:27:51,854 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:51,854 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:27:52,100 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:27:52,100 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:28:04,153 - INFO:__main__:Request from DeepSeek: {
+  "jsonrpc": "2.0",
+  "method": "call_tool",
+  "params": {
+    "tool_name": "nuclei_scan",
+    "args": {
+      "urls": [
+        "http://testphp.vulnweb.com"
+      ],
+      "template_paths": [
+        "scanner/templates/xss-detection.yaml",
+        "scanner/templates/sql_injection_advanced.yaml",
+        "scanner/templates/lfi-rce-detection.yaml",
+        "scanner/templates/csrf-detection.yaml",
+        "scanner/templates/idor-detection.yaml",
+        "scanner/templates/ssrf-detection.yaml",
+        "scanner/templates/bac-detection.yaml",
+        "scanner/templates/sensitive-data-exposure.yaml"
+      ]
+    }
+  },
+  "id": 1
+}
+2025-05-28 14:28:04,679 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:04,679 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com'], Templates: ['scanner/templates/xss-detection.yaml', 'scanner/templates/sql_injection_advanced.yaml', 'scanner/templates/lfi-rce-detection.yaml', 'scanner/templates/csrf-detection.yaml', 'scanner/templates/idor-detection.yaml', 'scanner/templates/ssrf-detection.yaml', 'scanner/templates/bac-detection.yaml', 'scanner/templates/sensitive-data-exposure.yaml']
+2025-05-28 14:28:04,680 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:04,680 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:28:04,680 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:04,680 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\xss-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sql_injection_advanced.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\csrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\idor-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\ssrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\bac-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sensitive-data-exposure.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:28:05,659 - INFO:__main__:Request from DeepSeek: {
+  "jsonrpc": "2.0",
+  "method": "call_tool",
+  "params": {
+    "tool_name": "nuclei_scan",
+    "args": {
+      "urls": [
+        "http://testphp.vulnweb.com"
+      ],
+      "template_paths": [
+        "scanner/templates/xss-detection.yaml",
+        "scanner/templates/sql_injection_advanced.yaml",
+        "scanner/templates/lfi-rce-detection.yaml",
+        "scanner/templates/csrf-detection.yaml",
+        "scanner/templates/idor-detection.yaml",
+        "scanner/templates/ssrf-detection.yaml",
+        "scanner/templates/bac-detection.yaml",
+        "scanner/templates/sensitive-data-exposure.yaml"
+      ]
+    }
+  },
+  "id": 1
+}
+2025-05-28 14:28:06,177 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:06,176 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com'], Templates: ['scanner/templates/xss-detection.yaml', 'scanner/templates/sql_injection_advanced.yaml', 'scanner/templates/lfi-rce-detection.yaml', 'scanner/templates/csrf-detection.yaml', 'scanner/templates/idor-detection.yaml', 'scanner/templates/ssrf-detection.yaml', 'scanner/templates/bac-detection.yaml', 'scanner/templates/sensitive-data-exposure.yaml']
+2025-05-28 14:28:06,177 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:06,177 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:28:06,177 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:06,177 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\xss-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sql_injection_advanced.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\csrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\idor-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\ssrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\bac-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sensitive-data-exposure.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:28:06,368 - INFO:__main__:Request from DeepSeek: {
+  "jsonrpc": "2.0",
+  "method": "call_tool",
+  "params": {
+    "tool_name": "nuclei_scan",
+    "args": {
+      "urls": [
+        "http://testphp.vulnweb.com"
+      ],
+      "template_paths": [
+        "scanner/templates/xss-detection.yaml",
+        "scanner/templates/sql_injection_advanced.yaml",
+        "scanner/templates/lfi-rce-detection.yaml",
+        "scanner/templates/csrf-detection.yaml",
+        "scanner/templates/idor-detection.yaml",
+        "scanner/templates/ssrf-detection.yaml",
+        "scanner/templates/bac-detection.yaml",
+        "scanner/templates/sensitive-data-exposure.yaml"
+      ]
+    }
+  },
+  "id": 1
+}
+2025-05-28 14:28:07,094 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:07,094 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com'], Templates: ['scanner/templates/xss-detection.yaml', 'scanner/templates/sql_injection_advanced.yaml', 'scanner/templates/lfi-rce-detection.yaml', 'scanner/templates/csrf-detection.yaml', 'scanner/templates/idor-detection.yaml', 'scanner/templates/ssrf-detection.yaml', 'scanner/templates/bac-detection.yaml', 'scanner/templates/sensitive-data-exposure.yaml']
+2025-05-28 14:28:07,094 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:07,094 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:28:07,094 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:28:07,094 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\xss-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sql_injection_advanced.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\csrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\idor-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\ssrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\bac-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sensitive-data-exposure.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:28:28,018 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:28:28] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:28:28,058 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:28:28] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:29:05,391 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:29:05] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:29:27,156 - INFO:__main__:Request from DeepSeek: {
+  "jsonrpc": "2.0",
+  "method": "call_tool",
+  "params": {
+    "tool_name": "nuclei_scan",
+    "args": {
+      "urls": [
+        "http://testphp.vulnweb.com"
+      ],
+      "template_paths": [
+        "scanner/templates/xss-detection.yaml",
+        "scanner/templates/sql_injection_advanced.yaml",
+        "scanner/templates/lfi-rce-detection.yaml",
+        "scanner/templates/csrf-detection.yaml",
+        "scanner/templates/idor-detection.yaml",
+        "scanner/templates/ssrf-detection.yaml",
+        "scanner/templates/bac-detection.yaml",
+        "scanner/templates/sensitive-data-exposure.yaml"
+      ]
+    }
+  },
+  "id": 1
+}
+2025-05-28 14:29:27,656 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:29:27,655 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com'], Templates: ['scanner/templates/xss-detection.yaml', 'scanner/templates/sql_injection_advanced.yaml', 'scanner/templates/lfi-rce-detection.yaml', 'scanner/templates/csrf-detection.yaml', 'scanner/templates/idor-detection.yaml', 'scanner/templates/ssrf-detection.yaml', 'scanner/templates/bac-detection.yaml', 'scanner/templates/sensitive-data-exposure.yaml']
+2025-05-28 14:29:27,656 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:29:27,656 - INFO:__main__:Current working directory: D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp
+2025-05-28 14:29:27,656 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:29:27,656 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com -t D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\xss-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sql_injection_advanced.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\csrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\idor-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\ssrf-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\bac-detection.yaml,D:\nuclei_mcp_nhom12\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan (1)\22162029_LeQuangTrongNghia_22162024_VoDamThanhLuan\nuclei-mcp\nuclei-mcp\scanner\templates\sensitive-data-exposure.yaml -jsonl -silent -rate-limit 10
+2025-05-28 14:31:09,679 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:09,679 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com
+2025-05-28 14:31:10,633 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:10,632 - INFO:__main__:Base request to http://testphp.vulnweb.com/listproducts.php?cat=1 took 0.49s
+2025-05-28 14:31:10,873 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:10,872 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:11,120 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:11,120 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:11,143 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:11,143 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com
+2025-05-28 14:31:11,382 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:11,381 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com
+2025-05-28 14:31:11,618 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:11,616 - INFO:__main__:Base request to http://testphp.vulnweb.com/listproducts.php?cat=1 took 0.46s
+2025-05-28 14:31:11,856 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:11,856 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:11,863 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:11,863 - INFO:__main__:Base request to http://testphp.vulnweb.com/listproducts.php?cat=1 took 0.47s
+2025-05-28 14:31:12,103 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:12,102 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:12,103 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:12,102 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:12,349 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:12,349 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:13,089 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:13,089 - INFO:__main__:Base request to http://testphp.vulnweb.com/artists.php?artist=1 took 0.49s
+2025-05-28 14:31:13,332 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:13,332 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:13,337 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:13,337 - INFO:__main__:Base request to http://testphp.vulnweb.com/search.php?test=1 took 0.49s
+2025-05-28 14:31:13,578 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:13,578 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:13,578 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:13,578 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:13,824 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:13,824 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:15,550 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:15,550 - INFO:__main__:Base request to http://testphp.vulnweb.com/search.php?test=1 took 0.49s
+2025-05-28 14:31:15,552 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:15,552 - INFO:__main__:Base request to http://testphp.vulnweb.com/artists.php?artist=1 took 0.49s
+2025-05-28 14:31:15,793 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:15,792 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:15,793 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:15,793 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:16,039 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:16,038 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:16,039 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:16,038 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:16,340 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:16,340 - INFO:__main__:Base request to http://testphp.vulnweb.com/artists.php?artist=1 took 0.54s
+2025-05-28 14:31:16,538 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:16,538 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BSLEEP%2810%29-- took 0.20s
+2025-05-28 14:31:16,777 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:16,777 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:17,027 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:17,027 - INFO:__main__:Base request to http://testphp.vulnweb.com/search.php?test=1 took 0.49s
+2025-05-28 14:31:17,272 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:17,272 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:31:17,515 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:31:17,514 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:31:49,270 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:31:49] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:31:49,295 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:31:49] "GET /results HTTP/1.1" 200 -
+2025-05-28 14:31:49,830 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:31:49] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:31:56,875 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:31:56] "POST /scan HTTP/1.1" 200 -
+2025-05-28 14:32:32,121 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:32,121 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com
+2025-05-28 14:32:32,554 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:32,553 - INFO:__main__:Base request to http://testphp.vulnweb.com/search.php?test=1 took 0.42s
+2025-05-28 14:32:32,793 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:32,793 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:32:33,043 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:33,043 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/search.php?test=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.25s
+2025-05-28 14:32:34,048 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:34,048 - INFO:__main__:Base request to http://testphp.vulnweb.com/listproducts.php?cat=1 took 0.51s
+2025-05-28 14:32:34,273 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:34,273 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BSLEEP%2810%29-- took 0.22s
+2025-05-28 14:32:34,525 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:34,525 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/listproducts.php?cat=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.25s
+2025-05-28 14:32:35,993 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:35,993 - INFO:__main__:Base request to http://testphp.vulnweb.com/artists.php?artist=1 took 0.49s
+2025-05-28 14:32:36,236 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:36,236 - INFO:__main__:SLEEP request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BSLEEP%2810%29-- took 0.24s
+2025-05-28 14:32:36,482 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-28 14:32:36,482 - INFO:__main__:WAITFOR request to http://testphp.vulnweb.com/artists.php?artist=1%27%2BOR%2BWAITFOR%20DELAY%20%270:0:10%27-- took 0.24s
+2025-05-28 14:33:15,104 - INFO:werkzeug:127.0.0.1 - - [28/May/2025 14:33:15] "POST /scan HTTP/1.1" 200 -
+2025-05-30 14:57:30,645 - INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.228.79:5000
+2025-05-30 14:57:30,645 - INFO:werkzeug:[33mPress CTRL+C to quit[0m
+2025-05-30 14:57:30,650 - INFO:werkzeug: * Restarting with stat
+2025-05-30 14:57:31,295 - WARNING:werkzeug: * Debugger is active!
+2025-05-30 14:57:31,300 - INFO:werkzeug: * Debugger PIN: 111-713-453
+2025-05-30 14:57:48,761 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 14:57:48] "GET / HTTP/1.1" 200 -
+2025-05-30 14:57:49,732 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 14:57:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-30 14:58:09,769 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 14:58:09,769 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com/'], Templates: ['scanner\\templates\\lfi-rce-detection.yaml']
+2025-05-30 14:58:09,769 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 14:58:09,769 - INFO:__main__:Current working directory: D:\Nclei-Mcp-Nhom12\nuclei-mcp
+2025-05-30 14:58:09,769 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 14:58:09,769 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t D:\Nclei-Mcp-Nhom12\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml -jsonl -silent -rate-limit 10
+2025-05-30 15:01:13,195 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 15:01:13,195 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com/
+2025-05-30 15:01:15,331 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 15:01:15] "POST /scan HTTP/1.1" 200 -
+2025-05-30 15:01:15,369 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 15:01:15] "GET /results HTTP/1.1" 200 -
+2025-05-30 16:10:05,596 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 16:10:05] "GET / HTTP/1.1" 200 -
+2025-05-30 16:10:11,856 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 16:10:11,856 - INFO:__main__:Starting nuclei_scan with URLs: ['http://testphp.vulnweb.com/'], Templates: ['scanner\\templates\\lfi-rce-detection.yaml']
+2025-05-30 16:10:11,856 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 16:10:11,856 - INFO:__main__:Current working directory: D:\Nclei-Mcp-Nhom12\nuclei-mcp
+2025-05-30 16:10:11,857 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 16:10:11,856 - INFO:__main__:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t D:\Nclei-Mcp-Nhom12\nuclei-mcp\scanner\templates\lfi-rce-detection.yaml -jsonl -silent -rate-limit 10
+2025-05-30 16:13:14,276 - WARNING:__main__:Non-JSON output from mcp_server.py: 2025-05-30 16:13:14,276 - INFO:__main__:Nuclei scan completed for http://testphp.vulnweb.com/
+2025-05-30 16:13:19,191 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 16:13:19] "POST /scan HTTP/1.1" 200 -
+2025-05-30 16:13:19,229 - INFO:werkzeug:127.0.0.1 - - [30/May/2025 16:13:19] "GET /results HTTP/1.1" 200 -

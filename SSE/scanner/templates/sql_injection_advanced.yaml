@@ -1,7 +1,7 @@
 id: sql-injection-advanced
 info:
   name: Advanced SQL Injection Detection
-  author: nghia
+  author: luan
   severity: critical
   description: Detects SQL Injection vulnerabilities using advanced payloads.
   reference:

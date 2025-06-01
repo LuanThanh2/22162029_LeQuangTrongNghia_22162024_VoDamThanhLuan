@@ -1,177 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scan Results</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 min-h-screen p-6">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-6xl mx-auto">
-      <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">
-        Scan Results
-      </h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .summary {
+            margin-bottom: 20px;
+        }
+        .summary div {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .filter-search {
+            margin-bottom: 20px;
+        }
+        .filter-search select, .filter-search input {
+            padding: 5px;
+        }
+        .error {
+            color: red;
+        }
+        .analysis {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .critical { background-color: #ffcccc; }
+        .high { background-color: #ffebcc; }
+        .medium { background-color: #ffffcc; }
+        .low { background-color: #ccffcc; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Scan Results</h1>
 
-      {% if error_message %}
-      <div class="mb-6 p-4 bg-red-100 text-red-700 rounded">
+    <div id="error-message" class="error">
+        {% if error_message %}
         {{ error_message }}
-      </div>
-      {% endif %}
-
-      <div class="mb-6">
-        <h2 class="text-xl font-semibold text-gray-700 mb-4">Summary</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="p-4 bg-gray-200 rounded">
-            <p class="text-gray-600">
-              Critical:
-              <span class="font-bold text-red-600">{{ summary.critical }}</span>
-            </p>
-            <p class="text-gray-600">
-              High:
-              <span class="font-bold text-orange-600">{{ summary.high }}</span>
-            </p>
-          </div>
-          <div class="p-4 bg-gray-200 rounded">
-            <p class="text-gray-600">
-              Medium:
-              <span class="font-bold text-yellow-600"
-                >{{ summary.medium }}</span
-              >
-            </p>
-            <p class="text-gray-600">
-              Low:
-              <span class="font-bold text-green-600">{{ summary.low }}</span>
-            </p>
-          </div>
-          <div class="p-4 bg-gray-200 rounded">
-            <p class="text-gray-600">
-              Duration: <span class="font-bold">{{ duration }} seconds</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {% if analysis %}
-      <div class="mb-6">
-        <h2 class="text-xl font-semibold text-gray-700 mb-4">
-          Analysis from DeepSeek
-        </h2>
-        <div class="p-4 bg-gray-200 rounded">{{ analysis | safe }}</div>
-      </div>
-      {% endif %}
-
-      <div class="mb-6">
-        <h2 class="text-xl font-semibold text-gray-700 mb-4">
-          Filter & Search
-        </h2>
-        <div class="flex flex-col md:flex-row gap-4">
-          <div>
-            <label
-              for="severity-filter"
-              class="block text-gray-700 font-semibold mb-2"
-              >Filter by Severity:</label
-            >
-            <select
-              id="severity-filter"
-              class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option>All</option>
-              <option>Critical</option>
-              <option>High</option>
-              <option>Medium</option>
-              <option>Low</option>
-            </select>
-          </div>
-          <div>
-            <label for="search" class="block text-gray-700 font-semibold mb-2"
-              >Search by Endpoint/Payload:</label
-            >
-            <input
-              type="text"
-              id="search"
-              placeholder="Search..."
-              class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-gray-700 mb-4">
-          Detailed Results
-        </h2>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse min-w-fit">
-            <thead>
-              <tr class="bg-gray-200 sticky top-0">
-                <th class="border p-2 text-left min-w-[150px]">Endpoint</th>
-                <th class="border p-2 text-left min-w-[150px]">Payload</th>
-                <th class="border p-2 text-left min-w-[100px]">Type</th>
-                <th class="border p-2 text-left min-w-[100px]">Verified</th>
-                <th class="border p-2 text-left min-w-[100px]">Severity</th>
-                <th class="border p-2 text-left min-w-[200px]">Description</th>
-                <th class="border p-2 text-left min-w-[150px]">Reference</th>
-                <th class="border p-2 text-left min-w-[100px]">Author</th>
-                <th class="border p-2 text-left min-w-[100px]">Tags</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% if results %} {% for result in results %}
-              <tr class="hover:bg-gray-100">
-                <td class="border p-2 truncate">
-                  {{ result.get('matched-at', 'N/A') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('payload', 'N/A') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('type', 'N/A') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ 'Yes' if result.get('verified') or
-                  result.get('time-based-verified') or
-                  result.get('boolean-based-verified') else 'No' }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('severity', 'Low') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('template-description', 'N/A') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('template-reference', 'N/A') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('template-author', 'N/A') }}
-                </td>
-                <td class="border p-2 truncate">
-                  {{ result.get('template-tags', 'N/A') }}
-                </td>
-              </tr>
-              {% endfor %} {% else %}
-              <tr>
-                <td colspan="9" class="border p-2 text-center text-gray-600">
-                  No vulnerabilities found.
-                </td>
-              </tr>
-              {% endif %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="mt-6 flex justify-between">
-        <a
-          href="/"
-          class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >Back to Home</a
-        >
-        <a
-          href="/history"
-          class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-600"
-          >View Scan History</a
-        >
-      </div>
+        {% endif %}
     </div>
-  </body>
+
+    <div id="summary" class="summary">
+        <h2>Summary</h2>
+        <div>Critical: <span id="critical-count">0</span></div>
+        <div>High: <span id="high-count">0</span></div>
+        <div>Medium: <span id="medium-count">0</span></div>
+        <div>Low: <span id="low-count">0</span></div>
+        <div>Duration: <span id="duration">0</span> seconds</div>
+    </div>
+
+    {% if analysis %}
+    <div class="analysis">
+        <h2>Analysis from DeepSeek</h2>
+        <p>{{ analysis | safe }}</p>
+    </div>
+    {% endif %}
+
+    <div class="filter-search">
+        <h2>Filter & Search</h2>
+        <div>
+            Filter by Severity:
+            <select id="severity-filter">
+                <option value="All">All</option>
+                <option value="Critical">Critical</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </div>
+        <div>
+            Search by Endpoint/Payload:
+            <input type="text" id="search-input" placeholder="Enter endpoint or payload">
+        </div>
+    </div>
+
+    <div>
+        <h2>Detailed Results</h2>
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Endpoint</th>
+                    <th>Payload</th>
+                    <th>Type</th>
+                    <th>Verified</th>
+                    <th>Severity</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                    <th>Author</th>
+                    <th>Tags</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+                <tr>
+                    <td colspan="9">Waiting for scan results...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a href="/"><button>Back to Home</button></a>
+        <a href="/history"><button>View Scan History</button></a>
+    </div>
+
+    <script>
+        const resultsBody = document.getElementById('results-body');
+        const severityFilter = document.getElementById('severity-filter');
+        const searchInput = document.getElementById('search-input');
+        let allResults = [];
+
+        // Nhận kết quả từ SSE
+        const source = new EventSource('/sse');
+        source.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            const errorMessageDiv = document.getElementById('error-message');
+
+            if (data.status === 'scanning') {
+                errorMessageDiv.textContent = 'Scanning in progress...';
+                resultsBody.innerHTML = '<tr><td colspan="9">Waiting for scan results...</td></tr>';
+            } else if (data.status === 'progress') {
+                const vuln = data.vulnerability;
+                allResults.push(vuln);
+                if (resultsBody.innerHTML.includes('Waiting for scan results...')) {
+                    resultsBody.innerHTML = '';
+                }
+                addResultRow(vuln);
+                updateSummary();
+                filterResults();
+            } else if (data.status === 'completed') {
+                const summary = data.summary;
+                document.getElementById('critical-count').textContent = summary.Critical;
+                document.getElementById('high-count').textContent = summary.High;
+                document.getElementById('medium-count').textContent = summary.Medium;
+                document.getElementById('low-count').textContent = summary.Low;
+                document.getElementById('duration').textContent = summary.Duration;
+                errorMessageDiv.textContent = '';
+                source.close();
+            } else if (data.status === 'error') {
+                errorMessageDiv.textContent = 'Error: ' + data.message;
+                source.close();
+            }
+        };
+        source.onerror = function() {
+            document.getElementById('error-message').textContent = 'Error connecting to SSE stream.';
+            source.close();
+        };
+
+        function addResultRow(vuln) {
+            const row = document.createElement('tr');
+            row.className = vuln.severity.toLowerCase();
+            row.innerHTML = `
+                <td>${vuln['matched-at'] || 'N/A'}</td>
+                <td>${vuln.payload || 'N/A'}</td>
+                <td>${vuln.type || 'N/A'}</td>
+                <td>${vuln.verified || 'No'}</td>
+                <td>${vuln.severity || 'Low'}</td>
+                <td>${vuln['template-description'] || 'N/A'}</td>
+                <td>${vuln['template-reference'] || 'N/A'}</td>
+                <td>${vuln['template-author'] || 'N/A'}</td>
+                <td>${vuln['template-tags'] || 'N/A'}</td>
+            `;
+            resultsBody.appendChild(row);
+        }
+
+        function updateSummary() {
+            let critical = 0, high = 0, medium = 0, low = 0;
+            allResults.forEach(vuln => {
+                const severity = vuln.severity.toLowerCase();
+                if (severity === 'critical') critical++;
+                else if (severity === 'high') high++;
+                else if (severity === 'medium') medium++;
+                else low++;
+            });
+            document.getElementById('critical-count').textContent = critical;
+            document.getElementById('high-count').textContent = high;
+            document.getElementById('medium-count').textContent = medium;
+            document.getElementById('low-count').textContent = low;
+        }
+
+        function filterResults() {
+            const severity = severityFilter.value;
+            const search = searchInput.value.toLowerCase();
+            const rows = resultsBody.getElementsByTagName('tr');
+
+            for (let row of rows) {
+                if (row.innerHTML.includes('Waiting for scan results...')) continue;
+                const severityClass = row.className;
+                const endpoint = row.cells[0].textContent.toLowerCase();
+                const payload = row.cells[1].textContent.toLowerCase();
+
+                const matchesSeverity = severity === 'All' || severityClass === severity.toLowerCase();
+                const matchesSearch = search === '' || endpoint.includes(search) || payload.includes(search);
+
+                row.style.display = matchesSeverity && matchesSearch ? '' : 'none';
+            }
+        }
+
+        severityFilter.addEventListener('change', filterResults);
+        searchInput.addEventListener('input', filterResults);
+    </script>
+</body>
 </html>

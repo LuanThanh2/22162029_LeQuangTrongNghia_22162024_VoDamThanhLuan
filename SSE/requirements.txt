@@ -6,3 +6,4 @@ fastapi
 uvicorn
 python-multipart
 jinja2
+aiohttp==3.10.5

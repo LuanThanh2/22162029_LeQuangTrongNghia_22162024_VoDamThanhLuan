@@ -1,7 +1,7 @@
 id: idor-detection
 info:
   name: Insecure Direct Object References Detection
-  author: nghia
+  author: luan
   severity: high
   description: Detects Insecure Direct Object References (IDOR) vulnerabilities by attempting to access unauthorized resources.
   reference:

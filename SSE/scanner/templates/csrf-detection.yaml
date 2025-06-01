@@ -1,7 +1,7 @@
 id: csrf-detection
 info:
   name: CSRF Detection
-  author: nghia
+  author: luan
   severity: medium
   description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
   reference:

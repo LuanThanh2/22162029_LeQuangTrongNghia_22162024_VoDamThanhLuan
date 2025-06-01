@@ -1,7 +1,7 @@
 id: xss-detection
 info:
   name: XSS Detection
-  author: nghia
+  author: luan
   severity: high
   description: Detects Reflected Cross-Site Scripting (XSS) vulnerabilities.
   reference:

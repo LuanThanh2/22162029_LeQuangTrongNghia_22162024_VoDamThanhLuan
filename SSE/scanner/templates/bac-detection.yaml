@@ -1,7 +1,7 @@
 id: bac-detection
 info:
   name: Broken Access Control Detection
-  author: nghia
+  author: luan
   severity: high
   description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
   reference:

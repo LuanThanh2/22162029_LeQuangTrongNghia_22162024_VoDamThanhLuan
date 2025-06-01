@@ -1,7 +1,7 @@
 id: lfi-rce-detection
 info:
   name: LFI and RCE Detection
-  author: nghia
+  author: luan
   severity: critical
   description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
   reference:

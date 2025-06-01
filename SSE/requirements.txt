@@ -1,0 +1,8 @@
+flask
+requests
+python-dotenv
+beautifulsoup4
+fastapi
+uvicorn
+python-multipart
+jinja2
